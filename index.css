@@ -1,0 +1,12 @@
+/* index.css */
+.home-garden-card {
+    transition: transform 0.2s;
+}
+
+.home-garden-card:hover {
+    transform: scale(1.05);
+}
+
+.h2 {
+    margin: 40px;
+}
