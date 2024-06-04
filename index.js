@@ -3,13 +3,13 @@
 const homeGardenData = [
     {
         id: 1,
-        name: 'Garden Furniture Set',
-        category: 'Furniture',
-        price: 15000,
-        location: 'Los Angeles',
-        images: ['img10.jpg', 'img10.jpg', 'img10.jpg', 'img10.jpg'],
-        postedDate: '2023-05-01',
-        description: 'This garden furniture set is perfect for outdoor lounging and dining. It is in excellent condition and includes a table and four chairs.'
+        name: 'Curtain',
+        category: 'Curtain',
+        price: 'Starting from 775/-',
+        location: 'Ragama',
+        images: ['Ad1/img1.jpg', 'Ad1/img2.jpg', 'Ad1/img3.jpg', 'Ad1/img4.jpg'],
+        postedDate: '2024-06-04',
+        description: 'ඔබගේ සියලුම දොර ජනෙල් රෙදි අවශ්‍යතා හා ඔබට අවශ්‍ය තිර රෙදි, බ්ලයින්ඩ්ස්, කර්ටන් පොල්ස් සහ accessories, ඩ්‍රයි ක්ලීනින් හා ෆිටින්ස් කටයුතු යනාදි සියලුම සෙවාවන් පහසු මිලට ඔබට ලබාගත හැක.   විමසීම් 0766 849 449',
     },
     // Add more home and garden items here
 ];
@@ -60,7 +60,7 @@ function displayHomeGarden() {
                 <div class="card-body">
                     <h5 class="card-title">${item.name}</h5>
                     <p class="card-text">Category: ${item.category}</p>
-                    <p class="card-text">Price: Rs.${item.price}</p>
+                    <p class="card-text">Price: ${item.price}</p>
                     <p class="card-text">Location: ${item.location}</p>
                     <p class="card-text">Posted: ${item.postedDate}</p>
                     <p class="card-text">${item.description.slice(0, 100)}... <a href="#" onclick="handleViewDetails(${item.id})">View More</a></p>
@@ -81,7 +81,7 @@ function handleViewDetails(id) {
             <img class="d-block w-100" src="${img}" alt="Item image">
         </div>`).join('');
     document.getElementById('modalCategory').innerText = `Category: ${item.category}`;
-    document.getElementById('modalPrice').innerText = `Price: Rs.${item.price}`;
+    document.getElementById('modalPrice').innerText = `Price: ${item.price}`;
     document.getElementById('modalLocation').innerText = `Location: ${item.location}`;
     document.getElementById('modalPostedDate').innerText = `Posted: ${item.postedDate}`;
     document.getElementById('modalDescription').innerText = item.description;
